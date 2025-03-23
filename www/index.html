@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDPLibre.org - Facturation électronique gratuite pour tous</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #0d9668;
+        }
+
+        .cta-button.blue {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .cta-button.blue:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #f3f4f6;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card.white {
+            background-color: white;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .section.even {
+
+        }
+        .section.odd {
+            background-color: #f3f4f6;
+        }
+        .section.accent {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .section h2 {
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+                
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .cta-section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+        }
+        
+        .skill-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 500;
+            display: inline-block;
+        }
+                
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+                
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PDPLibre.org</div>
+            <div class="nav-links">
+                <a href="#why">Pourquoi</a>
+                <a href="#about">À propos</a>
+                <a href="#join-us">Nous rejoindre</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <h1>Pour une facturation électronique accessible à tous</h1>
+            <p>PDPLibre.org est une association à but non lucratif ayant pour but de rendre accessible la facturation électronique au plus grand nombre.</p>
+            <a href="#join-us" class="cta-button">Soutenez-nous</a>
+        </div>
+    </header>
+    
+    <section id="why" class="section odd">
+        <h2>Pourquoi choisir PDPLibre ?</h2>
+        <div class="cards-container">
+            <div class="card white">
+                <div class="card-icon">🗓️</div>
+                <h3>Septembre 2026</h3>
+                <p>L'ensemble des entreprises devront recevoir les factures électroniques, et envoyer à partir de 2027 pour les PME et TPE.</p>
+            </div>
+            <div class="card white">
+                <div class="card-icon">🤯</div>
+                <h3>Fin portail public</h3>
+                <p>L'état ne mettra plus à disposition un portail gratuit et accessible à tout le monde.</p>
+            </div>
+            <div class="card white">
+                <div class="card-icon">💰</div>
+                <h3>Péage numérique</h3>
+                <p>Vous devrez payer une entreprise pour avoir droit de recevoir et envoyer une facture.</p>
+            </div>
+            <div class="card white">
+                <div class="card-icon">⚖️</div>
+                <h3>Gestion désintéressée</h3>
+                <p>Nous proposons une solution sans recherche de profit.</p>
+            </div>
+            <div class="card white">
+                <div class="card-icon">🛡️</div>
+                <h3>Aucune collecte de données</h3>
+                <p>Nous ne revendons pas vos données.</p>
+            </div>
+            <div class="card white">
+                <div class="card-icon">🌐</div>
+                <h3>Porté par la communauté</h3>
+                <p>Construit par et pour les utilisateurs. La gestion est transparente et le code source est open source.</p>
+            </div>
+        </div>
+    </section>
+        
+    <section id="about" class="section even">
+        <h2>À Propos de PDPLibre.org</h2>
+        <p>PDPLibre.org est une association à but non lucratif dédiée à rendre la facturation électronique accessible à tous. Nous croyons que le droit de recevoir et d'émettre des factures est essentiel pour les entreprises, sans dépendre du bon vouloir d'un tiers privé.</p>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h3>Notre mission</h3>
+                <p>Fournir des capacités de facturation électronique plus abordable possible, sécurisées et conformes aux entreprises de toutes tailles, en veillant à ce que personne ne soit laissé pour compte dans la transformation numérique.</p>
+            </div>
+            <div class="card">
+                <h3>Nos valeurs</h3>
+                <p>Accessibilité, confidentialité, transparence et collaboration communautaire guident tout ce que nous faisons chez PDPLibre.org.</p>
+            </div>
+            <div class="card">
+                <h3>Notre communauté</h3>
+                <p>PDPLibre.org est soutenu par une communauté croissante de développeurs, d'entreprises et de défenseurs des droits numériques.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="join-us" class="section accent">
+        <h2>Participez à la Révolution de la Facturation Électronique</h2>
+        <p>
+            PDPLibre.org est un projet ambitieux qui a besoin de votre expertise et de votre contribution. 
+            Nous recherchons des personnes motivées pour nous aider à construire une solution de facturation électronique la plus accessible à tous.
+        </p>
+        
+        <div class="skills-grid">
+            <span class="skill-tag">Certification</span>
+            <span class="skill-tag">Développement</span>
+            <span class="skill-tag">Sécurité</span>
+            <span class="skill-tag">UX/UI Design</span>
+            <span class="skill-tag">Juridique</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Expert métier</span>
+            <span class="skill-tag">Peppol</span>
+            <span class="skill-tag">Partenaire commerciale</span>
+        </div>
+        
+        <p>Que vous soyez un expert technique, un éditeur de logiciel, un designer ou simplement passionné par notre mission, votre contribution peut faire une différence significative.</p>
+
+        <a href="https://framaforms.org/contacter-pdplibre-1742742972" id="contact" class="cta-button blue">Nous contacter</a>
+    </section>
+    
+    <section id="faq" class="section odd">
+        <h2>Questions fréquemment</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Qu'est-ce qu'un PDP ?
+                </div>
+                <div class="faq-answer">
+                    Une plateforme de dématérialisation partenaire (PDP) est un système qui permet la validation, la transmission, et la réception de factures électroniques conformément aux exigences légales.<br />
+                    Vous n'aurez plus de droit de transmettre directement la facture à votre client, mais vous devrez la transmettre par le PDP de votre choix. Le PDP aura ensuite pour rôle de transmettre les données aux impôts et au PDP que votre client aura choisi.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Toutes les entreprises sont impactés?
+                </div>
+                <div class="faq-answer">
+                    Toutes les entreprises assujetis à la TVA seront impacte (même si vous êtes en franchise en base). L'ensemble des factures entre entreprises sont impactés. Les factures pour les particuliers et les entreprises étrangères sont pour l'instant hors scope. Vous avez tout de même besoin de transmettre l'ensemble des données aux impôts via le PDP.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Que signifie "aucune collecte de données" ?
+                </div>
+                <div class="faq-answer">
+                    Contrairement à d'autres solutions PDP, nous n'avons pas d'autres activités commerciales qui pourrait mettre en doute l'utilisation des données collectés. Nous utilisons les données uniquemement pour faire notre mission, sans partage avec un tiers, ou même à des membres de l'association.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Puis-je contribuer à PDPLibre.org ?
+                </div>
+                <div class="faq-answer">
+                    Absolument ! Chacun peut contribuer à sa hauteur. Futurs utilisateurs, partenaire commerciaux, développeurs, expert métier ou certification peuvent nous aider à réaliser ce projet.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PDPLibre.org</h3>
+                <p>Rendre la facturation électronique accessible à tous.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <a href="https://github.com/PDP-Libre/">Dépôt GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
