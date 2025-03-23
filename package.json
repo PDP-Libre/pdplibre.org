@@ -1,0 +1,14 @@
+{
+  "name": "pdplibre.org",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server www"
+  },
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
