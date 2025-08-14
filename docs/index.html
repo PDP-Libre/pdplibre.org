@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDPLibre.org - Facturation électronique pour tous</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #10b981;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --gray: #6b7280;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="PDP libre" />
+<link rel="manifest" href="site.webmanifest" />
+<meta name="description" content="Pour une facturation électronique accessible à tous">
+<meta property="og:url" content="https://pdplibre.org">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDP Libre">
+<meta property="og:description" content="og.png">
+<meta property="og:image" content="Pour une facturation électronique accessible à tous">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="pdplibre.org">
+<meta property="twitter:url" content="https://pdplibre.org">
+<meta name="twitter:title" content="PDP Libre">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="og.png">
+
+
+
+    <title>PDPLibre - Facturation électronique pour tous</title>
+ <style>
+        
+         
+          
+         
+          :root {
+            --primary: #fff;
+            --primary-dark: #000000;
+            --secondary: #5cd4e0;
+            --dark: #000000;
+            --light: #fafafa;
+            --gray: #1A1A1A;
+        }
+        
+        @font-face {
+            font-family: "opensans";
+            src: url('/OpenSans-Regular.ttf') format("woff2");
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'opensans', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -31,7 +61,6 @@
             background-color: var(--primary);
             color: white;
             padding: 1rem;
-            text-align: center;
         }
         
         nav {
@@ -42,10 +71,14 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
+            font-size: 3rem;
+            line-height: 80%;
+            color: #0000009e;
+            font-family: opensans;
         }
+        
+        .logo img { max-width: 50%;
+					max-height: 50%}
         
         .nav-links {
             display: flex;
@@ -53,13 +86,13 @@
         }
         
         .nav-links a {
-            color: white;
+            color: #397999;
             text-decoration: none;
             font-weight: 500;
         }
         
         .hero {
-            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9));
+            background: linear-gradient(#397999, black);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -79,7 +112,7 @@
         .cta-button {
             display: inline-block;
             background-color: var(--secondary);
-            color: white;
+            color: #397999;
             padding: 0.8rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
@@ -88,16 +121,17 @@
         }
         
         .cta-button:hover {
-            background-color: #0d9668;
+            background-color: var(--primary);
         }
 
         .cta-button.blue {
             background-color: var(--primary);
-            color: white;
+            color: #397999;
         }
         
         .cta-button.blue:hover {
             background-color: var(--primary-dark);
+            color:white;
         }
         
         .cards-container {
@@ -109,7 +143,7 @@
         }
 
         .card {
-            background-color: #f3f4f6;
+            background-color: #5cd4e0;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -132,10 +166,10 @@
 
         }
         .section.odd {
-            background-color: #f3f4f6;
+            background-color: #5cd4e0;
         }
         .section.accent {
-            background-color: var(--secondary);
+            background-color: #397999;
             color: white;
         }
 
@@ -204,7 +238,7 @@
         }
         
         .skill-tag {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: #5cd4e080;
             padding: 0.5rem 1rem;
             border-radius: 30px;
             font-weight: 500;
@@ -265,7 +299,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">PDPLibre.org</div>
+            <div class="logo"><img src="PDP_couleur.png"></div>
             <div class="nav-links">
                 <a href="#why">Pourquoi</a>
                 <a href="#about">À propos</a>
