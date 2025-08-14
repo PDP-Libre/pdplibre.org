@@ -58,9 +58,14 @@
         }
         
         header {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: white;
             padding: 1rem;
+        }
+
+        header > * {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         nav {
@@ -77,8 +82,9 @@
             font-family: opensans;
         }
         
-        .logo img { max-width: 50%;
-					max-height: 50%}
+        .logo img { 
+			height: 50px;
+        }
         
         .nav-links {
             display: flex;
@@ -86,13 +92,12 @@
         }
         
         .nav-links a {
-            color: #397999;
+            color: #e7e7e7;
             text-decoration: none;
             font-weight: 500;
         }
         
         .hero {
-            background: linear-gradient(#397999, black);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -243,6 +248,7 @@
             border-radius: 30px;
             font-weight: 500;
             display: inline-block;
+            color: #000;
         }
                 
         footer {
@@ -299,7 +305,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="PDP_couleur.png"></div>
+            <div class="logo"><img src="PDP_couleur.svg"></div>
             <div class="nav-links">
                 <a href="#why">Pourquoi</a>
                 <a href="#about">À propos</a>
@@ -312,7 +318,7 @@
         <div class="hero">
             <h1>Pour une facturation électronique accessible à tous</h1>
             <p>PDPLibre.org est une association à but non lucratif ayant pour but de rendre accessible la facturation électronique au plus grand nombre.</p>
-            <a href="#join-us" class="cta-button">Soutenez-nous</a>
+            <a href="#join-us" class="cta-button blue">Soutenez-nous</a>
         </div>
     </header>
     
