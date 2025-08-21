@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +10,23 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="PDP libre" />
 <link rel="manifest" href="site.webmanifest" />
-<meta name="theme-color" content="#397999">
 <meta name="description" content="Pour une facturation électronique accessible à tous">
-
 <meta property="og:url" content="https://pdplibre.org">
 <meta property="og:type" content="website">
-<meta property="og:title" content="𝗣𝘳𝘰𝘫𝘦𝘵 𝘥𝘦 𝗗𝘦́𝘮𝘢𝘵𝘦́𝘳𝘪𝘢𝘭𝘪𝘴𝘢𝘵𝘪𝘰𝘯 𝗣𝘢𝘳𝘵𝘪𝘤𝘪𝘱𝘢𝘵𝘪𝘧 𝘓𝘪𝘣𝘳𝘦">
-<meta property="og:description" content="Pour une facturation électronique accessible à tous">
-<meta property="og:image" content="https://pdplibre.org/og.png">
-<meta property="og:site_name" content="pdplibre.org" />
-
+<meta property="og:title" content="PDP Libre">
+<meta property="og:description" content="https://pdplibre.org/og.png">
+<meta property="og:image" content="Pour une facturation électronique accessible à tous">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:domain" content="pdplibre.org">
 <meta property="twitter:url" content="https://pdplibre.org">
-<meta name="twitter:title" content="𝗣𝘳𝘰𝘫𝘦𝘵 𝘥𝘦 𝗗𝘦́𝘮𝘢𝘵𝘦́𝘳𝘪𝘢𝘭𝘪𝘴𝘢𝘵𝘪𝘰𝘯 𝗣𝘢𝘳𝘵𝘪𝘤𝘪𝘱𝘢𝘵𝘪𝘧 𝘓𝘪𝘣𝘳𝘦">
+<meta name="twitter:title" content="PDP Libre">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://pdplibre.org/og.png">
 
-<meta itemprop="name" content="PDP Libre" />
-<meta itemprop="url" content="https://pdplibre.org" />
-<meta itemprop="thumbnailUrl" content="https://pdplibre.org/og.png" />
-
-    <script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "pdplibre.org",
-    "url": "https://pdplibre.org/",
-    "inLanguage":"fr-FR"
-}
-    </script>
 
 
     <title>PDPLibre - Facturation électronique pour tous</title>
- <style>
+<style>
         
          
           
@@ -59,7 +42,7 @@
         
         @font-face {
             font-family: "opensans";
-            src: url('/OpenSans-Regular.ttf') format("woff2");
+            src: url('./OpenSans-Regular.ttf') format("woff2");
         }
         
         * {
@@ -87,7 +70,7 @@
         }
         
         nav {
-            display: flex;
+        display: flex; 
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
@@ -225,7 +208,6 @@
             padding: 1.5rem;
             cursor: pointer;
             font-weight: 600;
-            display: flex;
             justify-content: space-between;
             align-items: center;
         }
@@ -309,6 +291,7 @@
             .nav-links {
                 display: none;
             }
+
             
             .hero h1 {
                 font-size: 2rem;
@@ -326,21 +309,29 @@
                 font-size: 0.85em;
             }
         }
+        
+            .rs {
+            text-align: center;
+            }
+ 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="PDP_couleur.svg"></div>
+            <div class="logo"><img src="PDP_couleur.svg" alt="'PDP' : Plateforme de Dématérialisation Partenaire ;  nouvelle appellation 'PA' : Plateforme Agréée" title="'PDP' : Plateforme de Dématérialisation Partenaire ;  nouvelle appellation 'PA' : Plateforme Agréée"></div>
             <div class="nav-links">
                 <a href="#why">Pourquoi</a>
                 <a href="#about">À propos</a>
                 <a href="#join-us">Nous rejoindre</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                
             </div>
         </nav>
-        
+     <div class="rs">             <a href="https://piaille.fr/@pdp_libre" target="_blank"><img src="mastodon.png"></a>
+                <a href="https://www.linkedin.com/company/pdp-libre/" target="_blank"><img src="linkedin.png"></a>
+     </div> 
         <div class="hero">
             <h1>Pour une facturation électronique accessible à tous</h1>
             <p>PDPLibre.org est une association à but non lucratif ayant pour but de rendre accessible la facturation électronique au plus grand nombre.</p>
@@ -349,7 +340,7 @@
     </header>
     
     <section id="why" class="section odd">
-        <h2>Pourquoi choisir PDPLibre ?</h2>
+        <h2>Pourquoi choisir <abbr title="'PDP' : Plateforme de Dématérialisation Partenaire ;  nouvelle appellation 'PA' : Plateforme Agréée ">PDP</abbr> Libre ?</h2>
         <div class="cards-container">
             <div class="card white">
                 <div class="card-icon">🗓️</div>
@@ -385,13 +376,13 @@
     </section>
         
     <section id="about" class="section even">
-        <h2>À Propos de PDPLibre.org</h2>
+        <h2>À Propos de PDPLibre.org</abr></h2>
         <p>PDPLibre.org est une association à but non lucratif dédiée à rendre la facturation électronique accessible à tous. Nous croyons que le droit de recevoir et d'émettre des factures est essentiel pour les entreprises, sans dépendre du bon vouloir d'un tiers privé.</p>
         
         <div class="cards-container">
             <div class="card">
                 <h3>Notre mission</h3>
-                <p>Fournir des capacités de facturation électronique les plus abordables possibles, sécurisées et conformes aux entreprises de toutes tailles, en veillant à ce que personne ne soit laissé pour compte dans la transformation numérique.</p>
+                <p>Fournir des capacités de facturation électronique le plus abordables possible, sécurisées et conformes aux entreprises de toutes tailles, en veillant à ce que personne ne soit laissé pour compte dans la transformation numérique.</p>
             </div>
             <div class="card">
                 <h3>Nos valeurs</h3>
@@ -432,38 +423,44 @@
         <h2>Questions fréquentes</h2>
         <div class="faq">
             <div class="faq-item">
-                <div class="faq-question">
-                    Qu'est-ce qu'un PDP ?
-                </div>
-                <div class="faq-answer">
-                    Une plateforme de dématérialisation partenaire (PDP) est un système qui permet la validation, la transmission, et la réception de factures électroniques conformément aux exigences légales.<br />
-                    Vous n'aurez plus le droit de transmettre directement la facture à votre client, mais vous devrez la transmettre par le PDP de votre choix. Le PDP aura ensuite pour rôle de transmettre les données aux impôts et au PDP que votre client aura choisi.
-                </div>
+              <details>
+ 			     <summary class="faq-question">
+ 			     Que signifie <abbr title="Plateforme de Dématérialisation Partenaire">PDP</abbr> (ou <abbr title="Plateforme Agréée ">PA</abbr>) ?
+ 			     </summary>
+               <p class="faq-answer">
+               Une Plateforme de Dématérialisation Partenaire (PDP) [nommée Plateforme Agréée (PA) depuis juillet 2025] est un système qui permet la validation, la transmission, et la réception de factures électroniques conformément aux exigences légales.<br />
+                    Vous n'aurez plus le droit de transmettre directement la facture à votre client, mais vous devrez la transmettre par le PDP de votre choix. Le PDP aura ensuite pour rôle de transmettre les données aux impôts et au PDP que votre client aura choisi.</p>
+            </details>    
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    Toutes les entreprises sont impactées ?
-                </div>
-                <div class="faq-answer">
+              <details>
+                <summary class="faq-question">
+                    Toutes les entreprises sont-elles concernées ?
+                </summary>
+                 <p class="faq-answer">
 Toutes les entreprises assujetties à la TVA seront impactées (même si vous êtes en franchise en base). L'ensemble des factures entre entreprises est impacté. Les factures pour les particuliers et les entreprises étrangères sont pour l'instant hors scope. Vous aurez tout de même besoin de transmettre l'ensemble des données aux impôts via le PDP.
-                </div>
+                </p>
+              </details>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    Que signifie "aucune collecte de données" ?
-                </div>
-                <div class="faq-answer">
+                <details>
+                <summary class="faq-question">
+                    Que signifie &laquo; aucune collecte de données &raquo; ?
+               </summary>
+                <p class="faq-answer">
                     Contrairement à d'autres solutions PDP, nous n'avons pas d'autres activités commerciales qui pourraient mettre en doute l'utilisation des données collectées. Nous utilisons les données uniquement pour faire notre mission, sans partage avec un tiers, ou même à des membres de l'association.
-                </div>
+               </p>
+              </details>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <details>
+                <summary class="faq-question">
                     Puis-je contribuer à PDPLibre.org ?
-                </div>
-                <div class="faq-answer">
+                </summary>
+                <p class="faq-answer">
                     Absolument ! Chacun peut contribuer à sa hauteur. Futurs utilisateurs, partenaires commerciaux, développeurs, expert métier ou certification peuvent nous aider à réaliser ce projet.
-                </div>
-            </div>
+                </p>
+              </details>
         </div>
     </section>
     
@@ -473,7 +470,7 @@ Toutes les entreprises assujetties à la TVA seront impactées (même si vous ê
                 <h3>PDPLibre.org</h3>
                 <p>Rendre la facturation électronique accessible à tous.</p>
             </div>
-			 <div class="footer-section">
+            <div class="footer-section">
                 <p><a href="https://piaille.fr/@pdp_libre" target="_blank"><img src="mastodon.png"></a>
            
             <a href="https://www.linkedin.com/company/pdp-libre/" target="_blank"><img src="linkedin.png"></a></p>
