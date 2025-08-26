@@ -298,12 +298,27 @@
         .footer-section a:hover {
             color: white;
         }
+        
+        .rs {
+            display: none;
+            visibility: collapse;
+            text-align: center;
+        }
+
+        @media (max-width: 840px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
                 
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
+            nav {
+                justify-content: center;
+            }
             
             .hero h1 {
                 font-size: 2rem;
@@ -320,11 +335,12 @@
             .skill-tag {
                 font-size: 0.85em;
             }
-        }
-        
+
             .rs {
-            text-align: center;
+                display: block;
+                visibility: visible;
             }
+        }
  
     </style>
 </head>
@@ -338,6 +354,8 @@
                 <a href="#join-us">Nous rejoindre</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                <a href="https://piaille.fr/@pdp_libre" target="_blank"><img src="mastodon.png"></a>
+                <a href="https://www.linkedin.com/company/pdp-libre/" target="_blank"><img src="linkedin.png"></a>
                 
             </div>
         </nav>
