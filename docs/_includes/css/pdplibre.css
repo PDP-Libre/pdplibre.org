@@ -1,760 +1,357 @@
-       
-          :root {
-            --primary: #fff;
-            --primary-dark: #000000;
-            --secondary: #5cd4e0;
-            --dark: #000000;
-            --light: #fafafa;
-            --gray: #1A1A1A;
-        }
-        
-        @font-face {
-            font-family: "opensans";
-            src: url('./OpenSans-Regular.ttf') format("woff2");
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'opensans', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            padding: 1rem;
-        }
+:root {
+  --primary: #fff;
+  --primary-dark: #000000;
+  --secondary: #5cd4e0;
+  --dark: #000000;
+  --light: #fafafa;
+  --gray: #1a1a1a;
+}
 
-        header > * {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav {
-        display: flex; 
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-        
-        .logo {
-            font-size: 3rem;
-            line-height: 80%;
-            color: #0000009e;
-            font-family: opensans;
-        }
-        
-        .logo img { 
-			height: 50px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: #e7e7e7;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .hero {
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: #397999;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--primary);
-        }
+@font-face {
+  font-family: "opensans";
+  src: url("./OpenSans-Regular.ttf") format("woff2");
+}
 
-        .cta-button.blue {
-            background-color: var(--primary);
-            color: #397999;
-        }
-        
-        .cta-button.blue:hover {
-            background-color: var(--primary-dark);
-            color:white;
-        }
-        
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "opensans", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .card {
-            background-color: #5cd4e0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .card.white {
-            background-color: white;
-        }
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
 
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
+header {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+  padding: 1rem;
+}
 
-        .section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .section.even {
+header > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        }
-        .section.odd {
-            background-color: #5cd4e0;
-        }
-        .section.accent {
-            background-color: #397999;
-            color: white;
-        }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
 
-        .section h2 {
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-        
-        .section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-                
-        .faq {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 1.5rem;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-        }
-        
-        .cta-section {
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .cta-section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skill-tag {
-            background-color: #5cd4e080;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            font-weight: 500;
-            display: inline-block;
-            color: #000;
-        }
-                
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a:hover {
-            color: white;
-        }
-        
-        .rs {
-            display: none;
-            visibility: collapse;
-            text-align: center;
-        }
+.logo {
+  font-size: 3rem;
+  line-height: 80%;
+  color: #0000009e;
+  font-family: opensans;
+}
 
-        @media (max-width: 840px) {
-            .nav-links {
-                gap: 1rem;
-            }
-        }
-                
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+.logo img {
+  height: 50px;
+}
 
-            nav {
-                justify-content: center;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
 
-            .cards-container{
-                grid-template-columns: 1fr;
-            }
+.nav-links a {
+  color: #e7e7e7;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-            .skill-tag {
-                font-size: 0.85em;
-            }
+.hero {
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
-            .rs {
-                display: block;
-                visibility: visible;
-            }
-        }
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
 
-                 
-          
-         
-          :root {
-            --primary: #fff;
-            --primary-dark: #000000;
-            --secondary: #5cd4e0;
-            --dark: #000000;
-            --light: #fafafa;
-            --gray: #1A1A1A;
-        }
-        
-        @font-face {
-            font-family: "opensans";
-            src: url('./OpenSans-Regular.ttf') format("woff2");
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'opensans', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            padding: 1rem;
-        }
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: #397999;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
 
-        header > * {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav {
-        display: flex; 
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-        
-        .logo {
-            font-size: 3rem;
-            line-height: 80%;
-            color: #0000009e;
-            font-family: opensans;
-        }
-        
-        .logo img { 
-			height: 50px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: #e7e7e7;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .hero {
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: #397999;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--primary);
-        }
+.cta-button:hover {
+  background-color: var(--primary);
+}
 
-        .cta-button.blue {
-            background-color: var(--primary);
-            color: #397999;
-        }
-        
-        .cta-button.blue:hover {
-            background-color: var(--primary-dark);
-            color:white;
-        }
-        
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.cta-button.blue {
+  background-color: var(--primary);
+  color: #397999;
+}
 
-        .card {
-            background-color: #5cd4e0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .card.white {
-            background-color: white;
-        }
+.cta-button.blue:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
 
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        .section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .section.even {
+.card {
+  background-color: #5cd4e0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        }
-        .section.odd {
-            background-color: #5cd4e0;
-        }
-        .section.accent {
-            background-color: #397999;
-            color: white;
-        }
+.card.white {
+  background-color: white;
+}
 
-        .section h2 {
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-        
-        .section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-                
-        .faq {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 1.5rem;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-        }
-        
-        .cta-section {
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .cta-section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skill-tag {
-            background-color: #5cd4e080;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            font-weight: 500;
-            display: inline-block;
-            color: #000;
-        }
-                
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a:hover {
-            color: white;
-        }
-                
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
 
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
-            .cards-container{
-                grid-template-columns: 1fr;
-            }
+.section.odd {
+  background-color: #5cd4e0;
+}
 
-            .skill-tag {
-                font-size: 0.85em;
-            }
-        }
-        
-            .rs {
-            text-align: center;
-            }
-           a , a:active:hover:visited{ color: #dadada; }
+.section.accent {
+  background-color: #397999;
+  color: white;
+}
 
-        
-        @font-face {
-            font-family: "opensans";
-            src: url('./OpenSans-Regular.ttf') format("woff2");
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'opensans', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
- 
+.section h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
 
-        .section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .section.even {
+.section p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
 
-        }
-        .section.odd {
-            background-color: #5cd4e0;
-        }
-        .section.accent {
-            background-color: #397999;
-            color: white;
-        }
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-        .section h2 {
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-        
-        .section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-                
-        .faq {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 1.5rem;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-        }
-        
-        .cta-section {
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .cta-section p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-        }
-        
-        .skill-tag {
-            background-color: #5cd4e080;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            font-weight: 500;
-            display: inline-block;
-            color: #000;
-        }
-                
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a:hover {
-            color: white;
-        }
-                
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+.faq-item {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
 
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
+.faq-question {
+  padding: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+}
 
-            .cards-container{
-                grid-template-columns: 1fr;
-            }
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+}
 
-            .skill-tag {
-                font-size: 0.85em;
-            }
-        }
-        
-            .rs {
-            text-align: center;
-            }
-           a , a:active:hover:visited{ color: #dadada; }           
+.cta-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+}
 
+.cta-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.cta-section p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.skill-tag {
+  background-color: #5cd4e080;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-block;
+  color: #000;
+}
+
+footer {
+  background-color: var(--dark);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: #d1d5db;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.rs {
+  display: none;
+  visibility: collapse;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("./OpenSans-Regular.ttf") format("woff2");
+}
+
+a,
+a:active:hover:visited {
+  color: #dadada;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("./OpenSans-Regular.ttf") format("woff2");
+}
+
+@media (max-width: 840px) {
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-tag {
+    font-size: 0.85em;
+  }
+
+  .rs {
+    display: block;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-tag {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-tag {
+    font-size: 0.85em;
+  }
+}
