@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    {% include snippets/head.html %}
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "pdplibre.org",
+        "url": "https://pdplibre.org/",
+        "inLanguage": "fr-FR"
+      }
+    </script>
+
+    <style>
+      {% include css/pdplibre.css %}
+    </style>
+
+    {% include js/matomo.html %}
+
+    <title>PDPLibre - Facturation électronique pour tous</title>
+  </head>
+  <body class="{{ class_body }}">
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="PDP_couleur.svg"
+            alt="'PDP' : Plateforme de Dématérialisation Partenaire ;  nouvelle appellation 'PA' : Plateforme Agréée"
+            title="'PDP' : Plateforme de Dématérialisation Partenaire ;  nouvelle appellation 'PA' : Plateforme Agréée" />
+        </div>
+        <div class="nav-links">
+          <a href="#why">Pourquoi</a>
+          <a href="#about">À propos</a>
+          <a href="#join-us">Nous rejoindre</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="https://piaille.fr/@pdp_libre" target="_blank"
+            ><img src="mastodon.png"
+          /></a>
+          <a href="https://www.linkedin.com/company/pdp-libre/" target="_blank"
+            ><img src="linkedin.png"
+          /></a>
+        </div>
+      </nav>
+      <div class="rs">
+        <a href="https://piaille.fr/@pdp_libre" target="_blank"
+          ><img src="mastodon.png" /></a
+        >&emsp;
+        <a href="https://www.linkedin.com/company/pdp-libre/" target="_blank"
+          ><img src="linkedin.png"
+        /></a>
+      </div>
+      <div class="hero">
+        <h1>Pour une facturation électronique accessible à tous</h1>
+        <p>
+          PDPLibre.org est une association à but non lucratif ayant pour but de
+          rendre accessible la facturation électronique au plus grand nombre.
+        </p>
+        <a href="#join-us" class="cta-button blue">Soutenez-nous</a>
+        &emsp;
+        <a
+          href="https://framaforms.org/contacter-pdplibre-1742742972"
+          id="contact"
+          class="cta-button blue"
+          >Inscrivez-vous</a
+        >
+      </div>
+    </header>
+
+    {{ content }}
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>PDPLibre.org</h3>
+          <p>Rendre la facturation électronique accessible à tous.</p>
+        </div>
+        <div class="footer-section">
+          <p>
+            <a href="https://piaille.fr/@pdp_libre" target="_blank"
+              ><img src="mastodon.png"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/pdp-libre/"
+              target="_blank"
+              ><img src="linkedin.png"
+            /></a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <a href="https://pdplibre.org/mentions.html">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
