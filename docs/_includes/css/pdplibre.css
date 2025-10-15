@@ -137,7 +137,7 @@ nav {
   text-align: center;
 }
 
-.section.odd {
+section:nth-child(even) {
   background-color: #5cd4e0;
 }
 
